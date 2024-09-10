@@ -1,0 +1,18 @@
+import "NullableString.idl";
+
+namespace DynamicStyleDemo_WinUI
+{
+    [bindable]
+    [default_interface]
+    runtimeclass GlobalStyleSelector : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        GlobalStyleSelector();
+        
+        DynamicStyleDemo_WinUI.NullableString CurrentStyle;
+
+        static Microsoft.UI.Xaml.Style GetStyle(String currentStyle, String styleKey);
+        static Microsoft.UI.Xaml.Style GetStyle(String currentStyle, String styleKey, Microsoft.UI.Xaml.Style fallbackStyle);
+        static GlobalStyleSelector Instance{ get; };
+
+    }
+}

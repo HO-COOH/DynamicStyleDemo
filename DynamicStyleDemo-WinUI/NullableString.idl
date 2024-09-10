@@ -1,0 +1,12 @@
+namespace DynamicStyleDemo_WinUI
+{
+    [bindable]
+    [default_interface]
+    runtimeclass NullableString 
+    {
+        NullableString();
+        NullableString(String v);
+        
+        String Value;
+    }
+}
